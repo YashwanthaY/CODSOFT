@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>fx-991CW | Classwiz Scientific Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="calc-shell">
+  <!-- top brand + solar like the real device -->
+  <header class="top-bar">
+    <div class="brand-block">
+      <div class="brand-line-1">CASIO</div>
+      <div class="brand-line-2">fx-991CW</div>
+    </div>
+    <div class="solar-panel"></div>
+  </header>
+
+  <div class="classwiz-label">CLASSWIZ</div>
+
+  <!-- display area -->
+  <section class="display-wrapper">
+    <div class="display-screen" aria-live="polite">
+      <div class="display-history" id="history"></div>
+      <div class="display-main" id="display">0</div>
+    </div>
+  </section>
+
+  <!-- nav + system keys section (small top keys like ON, SHIFT, arrows, etc.) -->
+  <section class="nav-section">
+    <div class="nav-row">
+      <button class="nav-key" data-action="ac">ON</button>
+      <button class="nav-key">HOME</button>
+      <button class="nav-key">SETTINGS</button>
+    </div>
+    <div class="nav-arrow-cluster">
+      <button class="nav-key arrow-key">▲</button>
+      <div class="nav-middle">
+        <button class="nav-key arrow-key">◀</button>
+        <button class="nav-key ok-key">OK</button>
+        <button class="nav-key arrow-key">▶</button>
+      </div>
+      <button class="nav-key arrow-key">▼</button>
+    </div>
+  </section>
+
+  <!-- shift / function row (non-scientific controls) -->
+  <section class="mode-row">
+    <button class="mode-key shift-key">SHIFT</button>
+    <button class="mode-key">ALPHA</button>
+    <button class="mode-key">MODE</button>
+    <button class="mode-key">STAT</button>
+    <button class="mode-key">TABLE</button>
+  </section>
+
+  <!-- main keypad laid out similar to fx-991CW bottom area -->
+  <main class="key-grid" aria-label="Scientific calculator keypad">
+
+    <!-- scientific & memory row -->
+    <button class="key func" data-action="ans">Ans</button>
+    <button class="key sci" data-token="sin(">sin</button>
+    <button class="key sci" data-token="cos(">cos</button>
+    <button class="key sci" data-token="tan(">tan</button>
+    <button class="key func" data-token="(">(</button>
+    <button class="key func" data-token=")">)</button>
+
+    <!-- second scientific row -->
+    <button class="key sci" data-token="log(">log</button>
+    <button class="key sci" data-token="ln(">ln</button>
+    <button class="key sci" data-token="sqrt(">√</button>
+    <button class="key sci" data-token="^">xʸ</button>
+    <button class="key sci" data-token="π">π</button>
+    <button class="key func" data-token="%">%</button>
+
+    <!-- number / operator block similar to Casio layout -->
+    <button class="key num" data-token="7">7</button>
+    <button class="key num" data-token="8">8</button>
+    <button class="key num" data-token="9">9</button>
+    <button class="key operator" data-token="÷">÷</button>
+    <button class="key func ac" data-action="ac">AC</button>
+    <button class="key func del" data-action="del">DEL</button>
+
+    <button class="key num" data-token="4">4</button>
+    <button class="key num" data-token="5">5</button>
+    <button class="key num" data-token="6">6</button>
+    <button class="key operator" data-token="×">×</button>
+    <button class="key func" data-token="+">+</button>
+    <button class="key func" data-token="-">−</button>
+
+    <button class="key num" data-token="1">1</button>
+    <button class="key num" data-token="2">2</button>
+    <button class="key num" data-token="3">3</button>
+    <button class="key num" data-token="0">0</button>
+    <button class="key num" data-token=".">●</button>
+    <button class="key equals" data-action="equals">EXE</button>
+  </main>
+
+  <p class="footer-strip">
+    SCIENTIFIC <span>HTML · CSS · JS</span> CALCULATOR
+  </p>
+
+  <span id="live-region" class="hidden-accessible" aria-live="polite"></span>
+</div>
+
+</body>
+</html>
